@@ -98,7 +98,7 @@ High-level flow:
 
 ### Structured Data
 
-- Eagles player, game, and season-level statistics  
+- Eagles player, game, and season-level statistics from nflVerse https://github.com/nflverse.
 - Seasons: 2020–2025  
 - Stored in SQLite and queried using Text-to-SQL
 
