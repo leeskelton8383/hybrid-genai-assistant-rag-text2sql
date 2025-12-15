@@ -1,4 +1,4 @@
-# Hybrid GenAI Assistant: RAG + Text-to-SQL
+# Hybrid GenAI Assistant: RAG + Natural Language Query
 
 This project demonstrates a modular **GenAI question-answering assistant** that uses a **language model as a dynamic router** to decide which tool to use for a given question.
 
