@@ -18,6 +18,30 @@ At the core of the system is an **LLM-based router** that:
 
 ---
 
+```mermaid
+flowchart LR
+    U[User Question]
+
+    U --> R[LLM Router]
+
+    R -->|Stats| TSQL[Text to SQL]
+    R -->|Narrative| RAG[Narrative RAG]
+    R -->|Hybrid| TSQL
+    R -->|Hybrid| RAG
+
+    TSQL --> DB[SQLite Stats DB]
+    DB --> TSQL
+
+    RAG --> VDB[Vector Index]
+    VDB --> RAG
+    RAG --> DOCS[Narrative Docs]
+
+    TSQL --> C[Answer Composer]
+    RAG --> C
+
+    C --> A[Final Answer]
+```
+
 ## What This Assistant Can Do
 
 ### Text-to-SQL (Structured Queries)
